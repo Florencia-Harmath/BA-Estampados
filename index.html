@@ -38,25 +38,17 @@
         <section class="inicio">
             <h1>BA ESTAMPADOS</h1>
             <article>
-                <div class="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item">
-                        <img src="img/gorra-index.jpeg" alt="Imagen 1">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="img/maquina-inicio.jpeg" alt="Imagen 2">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="img/remera-index.jpeg" alt="Imagen 3">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="img/taza-inicio.jpeg" alt="Imagen 4">
-                      </div>
+                <div class="carousel" id="carousel1">
+                    <div class="slides">
+                        <img src="img/gorra-index.jpeg" alt="Imagen-gorra">
+                        <img src="img/remera-index.jpeg" alt="Imagen-remera">
+                        <img src="img/taza-inicio.jpeg" alt="Imagen-taza">
                     </div>
-                    <a class="carousel-control prev">&#10094;</a>
-                    <a class="carousel-control next">&#10095;</a>
-                  </div>
-                        
+                    <div class="controls">
+                        <a class="prev" onclick="changeSlide('carousel1', -1)">&#10094;</a>
+                        <a class="next" onclick="changeSlide('carousel1', 1)">&#10095;</a>
+                    </div>
+                </div>    
             </article>
         </section>
 

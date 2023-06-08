@@ -1,43 +1,83 @@
 .carousel {
     position: relative;
-    width: 100%;
+    width: 90%;
+    max-width: 1000px;
+    height: 400px;
     overflow: hidden;
+    margin: 0 auto;
   }
   
-  .carousel-inner {
+  .slides {
     display: flex;
-    width: 400%; /* Ajusta este valor según el número de imágenes */
+    width: 300%;
   }
   
-  .carousel-item {
-    flex: 25%; /* Ajusta este valor según el número de imágenes */
-    text-align: center;
+  .slides img {
+    width: 33.333%;
+    object-fit: cover;
+    height: 400px;
   }
   
-  .carousel-item img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .carousel-control {
+  .controls {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .prev,
+  .next {
+    display: inline-block;
     width: 50px;
     height: 50px;
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     text-align: center;
-    font-size: 24px;
+    font-size: 30px;
     line-height: 50px;
-    text-decoration: none;
+    cursor: pointer;
   }
   
   .prev {
-    left: 0;
+    margin-right: 10px;
   }
   
   .next {
-    right: 0;
+    margin-left: 10px;
   }
   
+  @media (min-width: 620px) {
+    .carousel {
+      position: relative;
+      width: 90%;
+      max-width: 1000px;
+      height: 300px;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+  
+    .slides img {
+      width: 33.333%;
+      object-fit: cover;
+      height: 300px;
+    }
+  
+  }
+  
+  @media (min-width: 1024px) {
+    .carousel {
+      position: relative;
+      width: 90%;
+      max-width: 1000px;
+      height: 500px;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+  
+    .slides img {
+      width: 33.333%;
+      object-fit: cover;
+      height: 500px;
+    }
+  
+  }

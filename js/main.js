@@ -8,57 +8,21 @@
  });
 
  //carousel
- document.addEventListener("DOMContentLoaded", function() {
-  const carousel = document.querySelector(".carousel");
-  const carouselInner = carousel.querySelector(".carousel-inner");
-  const carouselItems = carousel.querySelectorAll(".carousel-item");
-  const prevBtn = carousel.querySelector(".prev");
-  const nextBtn = carousel.querySelector(".next");
-  const itemWidth = carouselItems[0].offsetWidth;
-  let currentPosition = 0;
+ function changeSlide(carouselId, n) {
+  const carousel = document.getElementById(carouselId);
+  const slides = carousel.getElementsByClassName('slides')[0];
+  const slideIndex = parseInt(carousel.getAttribute('data-slide-index')) || 0;
 
-  // Ajustar el tamaño del carrusel al tamaño del slide actual
-  carouselInner.style.width = `${itemWidth * carouselItems.length}px`;
+  const newSlideIndex = slideIndex + n;
+  const slideWidth = slides.offsetWidth / 3;
 
-  // Evento para el botón previo
-  prevBtn.addEventListener("click", function() {
-    currentPosition += itemWidth;
-    if (currentPosition > 0) {
-      currentPosition = -itemWidth * (carouselItems.length - 1);
-    }
-    carouselInner.style.transform = `translateX(${currentPosition}px)`;
-  });
-
-  // Evento para el botón siguiente
-  nextBtn.addEventListener("click", function() {
-    currentPosition -= itemWidth;
-    if (currentPosition < -itemWidth * (carouselItems.length - 1)) {
-      currentPosition = 0;
-    }
-    carouselInner.style.transform = `translateX(${currentPosition}px)`;
-  });
-
-  // Eventos táctiles para deslizar en dispositivos móviles
-  let touchStartX = 0;
-  let touchEndX = 0;
-
-  carousel.addEventListener("touchstart", function(event) {
-    touchStartX = event.touches[0].clientX;
-  });
-
-  carousel.addEventListener("touchend", function(event) {
-    touchEndX = event.changedTouches[0].clientX;
-    handleSwipe();
-  });
-
-  function handleSwipe() {
-    if (touchEndX < touchStartX) {
-      nextBtn.click();
-    } else if (touchEndX > touchStartX) {
-      prevBtn.click();
-    }
+  if (newSlideIndex >= slides.children.length || newSlideIndex < 0) {
+    return;
   }
-});
+
+  slides.style.transform = `translateX(-${slideWidth * newSlideIndex}px)`;
+  carousel.setAttribute('data-slide-index', newSlideIndex);
+}
 
 
 

@@ -1,0 +1,131 @@
+
+ .logo img {
+     object-fit: cover;
+ }
+
+ nav {
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     min-height: 8vh;
+     background-color: black;
+     position: fixed;
+     width: 100%;
+     z-index: 9999;
+ }
+
+ .ham {
+     display: none;
+     cursor: pointer;
+     border: none;
+     margin: 0;
+     padding: 0;
+     background-color: transparent;
+
+     span {
+         display: block;
+         background-color: magenta;
+         height: 4px;
+         width: 28px;
+         margin: 10px auto;
+         border-radius: 2px;
+     }
+ }
+
+ .enlaces-menu {
+     display: flex;
+     padding: 0;
+
+     li {
+         padding: 0 10px;
+     }
+
+     a {
+         color: white;
+         font-size: 1.2rem;
+
+         &:hover {
+             color:magenta;
+         }
+     }
+ }
+
+ @media (max-width: 620px) {
+     body {
+         overflow: hidden;
+     }
+
+     .logo {
+         padding-left: 25px;
+         width: 120px;
+         height: 100px;
+     }
+
+     .ham {
+         display: block;
+         position: absolute;
+         top: 15px;
+         right: 25px;
+     }
+
+     nav {
+         flex-direction: column;
+         align-items: flex-start;
+         padding: 20px 0;
+     }
+
+     .enlaces-menu {
+         flex-direction: column;
+         justify-content: space-around;
+         height: 35vh;
+         margin: 0;
+         padding: 0;
+         width: 100%;
+         display: none;
+         opacity: 0;
+
+         li {
+             width: auto;
+             text-align: center;
+             padding: .2em;
+
+             a {
+                 font-size: 1rem;
+             }
+         }
+     }
+
+     @keyframes MuestraMenu {
+         from{opacity:0;}
+         to{opacity:1;}
+     }
+
+     .enlaces-menu.activado {
+         display: flex;
+         animation: MuestraMenu .6s ease-in-out both;
+     }
+
+     .br-1.animado {
+         transform: rotate(-45deg) translate(-10px, 8px);
+     }
+
+     .br-2.animado {
+         opacity: 0;
+     }
+
+     .br-3.animado {
+         transform: rotate(45deg) translate(-10px, -8px);
+     }
+ }
+
+ @media (min-width: 1024px){
+     .enlaces-menu {
+     li {
+         padding: 0 40px;
+     }
+
+     a {
+        font-size: 1.6rem;
+     }
+     }
+ }

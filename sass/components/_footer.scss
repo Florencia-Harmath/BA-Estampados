@@ -1,21 +1,32 @@
 .footer {
     background-color: black;
     color: white;
-    font-size: .75rem;
-    padding: 1em;
+    font-size: 1rem;
+    padding-top: 3em;
+    padding-bottom: 2em;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin: auto;
 }
 
 .instagram-footer {
     text-align: center;
     margin-top: 20px;
+    margin-left: 0;
+
+    p {
+        padding: 1em;
+    }
 }
 
 .whatsapp-footer {
     text-align: center;
     margin-top: 20px;
+
+    p {
+        padding: 1em;
+    }
 }
 
 .logo-footer img {

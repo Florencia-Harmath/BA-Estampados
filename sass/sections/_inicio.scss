@@ -1,7 +1,8 @@
 .inicio {
     .h1-index {
-        text-shadow: 4px 4px 6px blue;
         font-size: 1.5rem;
+        margin-bottom: 20px;
+        text-decoration: underline;
     }
 
     h2 {
@@ -13,5 +14,37 @@
         text-align: center;
         padding: 1em;
         font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 620px){
+    .inicio {
+        .h1-index {
+            font-size: 1.7rem;
+        }
+    
+        h2 {
+            font-size: 1.4rem;
+        }
+    
+        p {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    .inicio {
+        .h1-index {
+            font-size: 2.2rem;
+        }
+    
+        h2 {
+            font-size: 1.6rem;
+        }
+    
+        p {
+            font-size: 1.4rem;
+        }
     }
 }

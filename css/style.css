@@ -61,15 +61,15 @@ h1 {
   align-items: center;
   justify-content: center;
   padding: 1em;
-  width: 80%;
-  height: auto;
+  width: 95%;
+  height: 300px;
 }
 
 .contactanos {
-  background-color: rgba(126, 252, 0, 0.349);
+  background-color: black;
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2), 0 8px 40px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
-  border: 1px solid black;
+  border: 2px solid greenyellow;
   margin: 0 auto;
   width: 90%;
   font-size: 1rem;
@@ -78,11 +78,13 @@ h1 {
 .contactanos .formulario {
   outline: none;
   padding: 0.3em;
+  border: 1px solid yellowgreen;
 }
 .contactanos .p-contacto-formulario {
   text-align: center;
   font-size: 1rem;
   padding-bottom: 1em;
+  color: white;
 }
 
 .div-formulario textarea {
@@ -92,6 +94,7 @@ h1 {
   box-sizing: border-box;
   border-radius: 4px;
   resize: none;
+  border: 1px solid yellowgreen;
 }
 
 .c-formulario {
@@ -101,6 +104,7 @@ h1 {
 }
 .c-formulario label {
   text-align: center;
+  color: white;
 }
 
 .boton-enviar {
@@ -115,6 +119,7 @@ h1 {
   font-size: 1rem;
   background-color: rgba(207, 203, 203, 0.714);
   padding: 0.5em;
+  border: 1px solid yellowgreen;
 }
 
 .medios {
@@ -278,9 +283,25 @@ h1 {
   margin: 15px;
   object-fit: cover;
 }
+.section-trabajos .grilla-trabajos {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 95%;
+  height: 80%;
+  padding: 1em;
+  gap: 50px;
+}
+.section-trabajos .grilla-trabajos .items {
+  border: 2px solid blueviolet;
+  border-radius: 10px;
+  transition: 0.3s;
+  background-color: black;
+  padding: 1em;
+}
 
 @media (min-width: 620px) {
-  .grilla-trabajos {
+  .grilla-trabajos .items {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 500px 500px 500px;
@@ -288,7 +309,7 @@ h1 {
     padding: 3em;
     overflow-y: hidden;
   }
-  .grilla-trabajos img {
+  .grilla-trabajos .items img {
     width: 100%;
     height: 100%;
   }
@@ -454,7 +475,7 @@ nav {
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 80%;
+  width: 95%;
   height: 80%;
   padding: 1em;
   gap: 50px;
@@ -492,6 +513,9 @@ nav {
   gap: 1em;
   margin-top: 30px;
 }
+.section-productos .contenedor-items .item .img-item:hover {
+  scale: 1.5;
+}
 .section-productos .contenedor-items .item .precio-item {
   display: block;
   text-align: center;
@@ -527,7 +551,7 @@ nav {
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 80%;
+  width: 95%;
   height: 80%;
   padding: 1em;
   gap: 50px;
@@ -564,6 +588,9 @@ nav {
   object-fit: cover;
   gap: 1em;
   margin-top: 30px;
+}
+.section-promociones .contenedor-items-promo .item-promo .img-item:hover {
+  scale: 1.5;
 }
 .section-promociones .contenedor-items-promo .item-promo .precio-item {
   display: block;

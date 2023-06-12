@@ -2,7 +2,7 @@
     .h1-contacto {
         background-color: lawngreen;
     }
-    
+
     p {
         text-align: center;
         font-size: 1.2rem;
@@ -15,16 +15,16 @@
         align-items: center;
         justify-content: center;
         padding: 1em;
-        width: 80%;
-        height: auto;
+        width: 95%;
+        height: 300px;
     }
 }
 
 .contactanos {
-    background-color: rgba(126, 252, 0, 0.349);
+    background-color: black;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2), 0 8px 40px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
-    border: 1px solid black;
+    border: 2px solid greenyellow;
     margin: 0 auto;
     width: 90%;
     font-size: 1rem;
@@ -33,6 +33,7 @@
     .formulario {
         outline: none;
         padding: .3em;
+        border: 1px solid yellowgreen;
 
     }
 
@@ -40,17 +41,19 @@
         text-align: center;
         font-size: 1rem;
         padding-bottom: 1em;
+        color: white;
     }
 
 }
 
 .div-formulario textarea {
-width: 100%;
-  height: 150px;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border-radius: 4px;
-  resize: none;
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: none;
+    border: 1px solid yellowgreen;
 }
 
 .c-formulario {
@@ -60,6 +63,7 @@ width: 100%;
 
     & label {
         text-align: center;
+        color: white;
     }
 }
 
@@ -69,13 +73,14 @@ width: 100%;
     justify-content: center;
 
     & :hover {
-        transform: scale(1.1,1.1);
+        transform: scale(1.1, 1.1);
     }
-        
+
     & input {
         font-size: 1rem;
         background-color: rgba(207, 203, 203, 0.714);
         padding: 0.5em;
+        border: 1px solid yellowgreen;
     }
 }
 
@@ -134,7 +139,7 @@ width: 100%;
     }
 }
 
-@media (min-width: 620px){
+@media (min-width: 620px) {
     .contactanos {
         display: block;
         width: 50%;
@@ -142,11 +147,11 @@ width: 100%;
         padding: 3em;
     }
 
-    .section-contacto {    
+    .section-contacto {
         p {
             font-size: 1.4rem;
         }
-    
+
         iframe {
             height: 60vh;
         }
@@ -154,12 +159,12 @@ width: 100%;
 
     .medios {
         flex-direction: row;
-    
+
         .envios {
             width: 350px;
             height: 350px;
         }
-    
+
         .telefono {
             width: 350px;
             height: 350px;
@@ -170,5 +175,5 @@ width: 100%;
             height: 350px;
         }
     }
-    
+
 }

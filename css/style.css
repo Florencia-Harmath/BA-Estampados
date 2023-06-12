@@ -13,7 +13,7 @@ a {
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
-  background-color: rgba(0, 0, 0, 0.226);
+  background-color: rgba(0, 0, 0, 0.664);
 }
 
 main {
@@ -273,7 +273,8 @@ h1 {
   margin: auto 0;
   width: 91%;
   height: 300px;
-  border: solid black 1px;
+  border: solid blueviolet 2px;
+  border-radius: 5px;
   margin: 15px;
   object-fit: cover;
 }
@@ -463,15 +464,16 @@ nav {
   transition: 0.3s;
 }
 .section-productos .contenedor-items .item {
-  border: 1px solid black;
+  border: 2px solid magenta;
   border-radius: 10px;
   transition: 0.3s;
-  background-color: rgba(255, 0, 255, 0.322);
+  background-color: black;
   padding: 1em;
 }
 .section-productos .contenedor-items .item .descripcion-item {
   text-align: center;
   font-size: 1rem;
+  color: white;
 }
 .section-productos .contenedor-items .item .titulo-item {
   font-size: 1.1rem;
@@ -479,12 +481,13 @@ nav {
   font-weight: bold;
   text-align: center;
   padding: 0.5em;
+  color: white;
 }
 .section-productos .contenedor-items .item .img-item {
   width: 100%;
   height: 200px;
   border-radius: 20%;
-  border: solid black 1px;
+  border: solid magenta 1px;
   object-fit: cover;
   gap: 1em;
   margin-top: 30px;
@@ -495,12 +498,24 @@ nav {
   font-weight: bold;
   font-size: 1rem;
   padding: 0.5em;
+  color: white;
 }
 
 .boton-img {
   display: block;
   margin: 10px auto;
-  border: 21x solid black;
+  border: 2px solid magenta;
+  background: white;
+  color: black;
+  padding: 6px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.boton-img-promo {
+  display: block;
+  margin: 10px auto;
+  border: 2px solid yellow;
   background: white;
   color: black;
   padding: 6px 15px;
@@ -522,15 +537,16 @@ nav {
   transition: 0.3s;
 }
 .section-promociones .contenedor-items-promo .item-promo {
-  border: 1px solid black;
+  border: 1px solid yellow;
   border-radius: 10px;
   transition: 0.3s;
-  background-color: rgba(255, 255, 0, 0.507);
+  background-color: black;
   padding: 1em;
 }
 .section-promociones .contenedor-items-promo .item-promo .descripcion-item {
   text-align: center;
   font-size: 1rem;
+  color: white;
 }
 .section-promociones .contenedor-items-promo .item-promo .titulo-item {
   font-size: 1.1rem;
@@ -538,16 +554,16 @@ nav {
   font-weight: bold;
   text-align: center;
   padding: 0.5em;
+  color: white;
 }
 .section-promociones .contenedor-items-promo .item-promo .img-item {
-  width: 200px;
-  height: 150px;
+  width: 100%;
+  height: 200px;
   border-radius: 20%;
-  border: solid black 1px;
+  border: solid yellow 1px;
   object-fit: cover;
   gap: 1em;
   margin-top: 30px;
-  margin-left: 25px;
 }
 .section-promociones .contenedor-items-promo .item-promo .precio-item {
   display: block;
@@ -555,6 +571,7 @@ nav {
   font-weight: bold;
   font-size: 1rem;
   padding: 0.5em;
+  color: white;
 }
 
 @media (min-width: 620px) {

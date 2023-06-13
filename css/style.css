@@ -514,7 +514,7 @@ nav {
   margin-top: 30px;
 }
 .section-productos .contenedor-items .item .img-item:hover {
-  scale: 1.5;
+  scale: 1.3;
 }
 .section-productos .contenedor-items .item .precio-item {
   display: block;
@@ -590,7 +590,7 @@ nav {
   margin-top: 30px;
 }
 .section-promociones .contenedor-items-promo .item-promo .img-item:hover {
-  scale: 1.5;
+  scale: 1.3;
 }
 .section-promociones .contenedor-items-promo .item-promo .precio-item {
   display: block;

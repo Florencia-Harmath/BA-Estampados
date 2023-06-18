@@ -17,6 +17,15 @@
     }
 }
 
+.cupon {
+    img {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        object-fit: cover;
+    }
+}
+
 @media (min-width: 620px){
     .inicio {
         .h1-index {
@@ -45,6 +54,14 @@
     
         p {
             font-size: 1.4rem;
+        }
+    }
+
+    .cupon {
+        img {
+            width: 50%;
+            height: auto;
+            padding: 30px;
         }
     }
 }

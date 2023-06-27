@@ -529,14 +529,6 @@ nav {
     transform: rotate(45deg) translate(-10px, -8px);
   }
 }
-@media (max-width: 1024px) {
-  .enlaces-menu li {
-    padding: 0 40px;
-  }
-  .enlaces-menu a {
-    font-size: 1.6rem;
-  }
-}
 .section-productos .contenedor {
   display: flex;
   flex-direction: column;

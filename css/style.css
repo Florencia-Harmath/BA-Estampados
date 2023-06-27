@@ -270,6 +270,38 @@ h1 {
   color: magenta;
 }
 
+.carrito-productos {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  gap: 30px;
+}
+.carrito-productos h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1em;
+}
+.carrito-productos button, .carrito-productos input {
+  padding: 1em;
+  font-size: 1.3rem;
+  text-align: center;
+  cursor: pointer;
+  border: solid magenta;
+  background-color: rgba(255, 0, 255, 0.331);
+  border-radius: 5px;
+  width: 40%;
+  display: flex;
+  margin: auto;
+}
+.carrito-productos p {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: auto;
+  padding: 1em;
+  width: 40%;
+  border: solid magenta;
+}
+
 .h1-promociones {
   background-color: rgb(255, 255, 0);
 }

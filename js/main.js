@@ -18,8 +18,7 @@ const  p  = document.getElementById("resultado-final");
 function agregar(producto) { 
   carrito.push(producto);
   console.log(carrito);
-  alert("producto agregado correctamente");
-  
+  alert("producto agregado correctamente"); 
 } 
 
 function vaciarCarrito () {

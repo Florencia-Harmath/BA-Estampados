@@ -53,9 +53,14 @@
 
         <section class="productos" id="productos">
             <h1 class="h1-productos">PRODUCTOS DESTACADOS</h1>
+            <button onclick="mostrarCarrito()">VER TOTAL</button>
+            <button onclick="vaciarCarrito()">VACIAR CARRITO</button>
+            <p id="resultado-final"></p>
+            <input type="text" id="input-descuento">
+            <button onclick="aplicarDescuento()">APLICAR DESCUENTO</button>
             <article class="section-productos">
                 <section class="contenedor">
-                    <div class="contenedor-items">
+                    <div class="contenedor-items" >
                         <div class="item">
                             <span class="titulo-item">REMERAS HOMBRE GRANDES</span>
                             <p class="descripcion-item">Remeras para hombre, talles XL, XXL y XXXL,
@@ -63,7 +68,7 @@
                             <img src="img/remera-hombre-grande.jpeg" alt="imagen-remera-estampada-hombre-grande"
                                 class="img-item">
                             <span class="precio-item">$5000</span>
-                            <button class="boton-img">Agregar al carrito</button>
+                            <button class="boton-img" onclick="agregar({nombre: 'remeras', precio: 2000})">Agregar al carrito</button>
                         </div>
                     </div>
 
@@ -74,7 +79,7 @@
                                 estampado a elección.</p>
                             <img src="img/remera-homre.jpeg" alt="imagen-remera-estampada-hombre" class="img-item">
                             <span class="precio-item">$4000</span>
-                            <button class="boton-img">Agregar al carrito</button>
+                            <button class="boton-img" onclick="agregar({nombre: 'remeras', precio: 2000})">Agregar al carrito</button>
                         </div>
                     </div>
 
@@ -85,7 +90,7 @@
                                 estampado a elección.</p>
                             <img src="img/remeras-ninios.jpeg" alt="imagen-remera-estampada-ninios" class="img-item">
                             <span class="precio-item">$3000</span>
-                            <button class="boton-img">Agregar al carrito</button>
+                            <button class="boton-img" onclick="agregar({nombre: 'remeras', precio: 2000})">Agregar al carrito</button>
                         </div>
                     </div>
 
@@ -96,7 +101,7 @@
                                 estampado a elección.</p>
                             <img src="img/remera-mujer.jpeg" alt="imagen-remera-estampada-mujeres" class="img-item">
                             <span class="precio-item">$4500</span>
-                            <button class="boton-img">Agregar al carrito</button>
+                            <button class="boton-img" onclick="agregar({nombre: 'remeras', precio: 2000})">Agregar al carrito</button>
                         </div>
                     </div>
 
@@ -107,7 +112,7 @@
                                 estampado a elección.</p>
                             <img src="img/remera-mujer-grande.jpeg" alt="imagen-remera-estampada-mujeres"
                                 class="img-item">
-                            <span class="precio-item">$5500</span>
+                            <span class="precio-item" onclick="agregar({nombre: 'remeras', precio: 2000})">$5500</span>
                             <button class="boton-img">Agregar al carrito</button>
                         </div>
                     </div>
@@ -119,7 +124,7 @@
                             <img src="img/productos-taza-independiente.jpeg" alt="imagen-tazas-estampada"
                                 class="img-item">
                             <span class="precio-item">$2500</span>
-                            <button class="boton-img">Agregar al carrito</button>
+                            <button class="boton-img" onclick="agregar({nombre: 'remeras', precio: 2000})">Agregar al carrito</button>
                         </div>
                     </div>
 
@@ -130,7 +135,7 @@
                             <img src="img/gorras-estampadas.jpeg" alt="imagen-remera-estampada-mujeres"
                                 class="img-item">
                             <span class="precio-item">$2000</span>
-                            <button class="boton-img">Agregar al carrito</button>
+                            <button class="boton-img" onclick="agregar({nombre: 'remeras', precio: 2000})">Agregar al carrito</button>
                         </div>
                     </div>
 
@@ -141,7 +146,7 @@
                                 15cm.</p>
                             <img src="img/cuadros-estampados.jpeg" alt="imagen-cuadro-estampado" class="img-item">
                             <span class="precio-item">$1500</span>
-                            <button class="boton-img">Agregar al carrito</button>
+                            <button class="boton-img" onclick="agregar({nombre: 'remeras', precio: 2000})">Agregar al carrito</button>
                         </div>
                     </div>
                 </section>

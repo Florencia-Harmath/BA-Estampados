@@ -1,338 +1,504 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" href="img/logo-icono (2).ico" />
-    <meta name="Description" content="Productos estampados, sublimados. Remeras, tazas y mas en buenos aires">
+    <meta
+      name="Description"
+      content="Productos estampados, sublimados. Remeras, tazas y mas en buenos aires"
+    />
     <title>EstampadosBA|sublimados|tazas|remeras|BuenosAires</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header>
-
-        <nav>
-            <a href="index.html"><img src="img/logo-150.jpeg" alt="logo" class="logo"></a>
-            <ul class="enlaces-menu" id="capa">
-                <li><a href="#inicio">INICIO</a></li>
-                <li><a href="#productos">PRODUCTOS</a></li>
-                <li><a href="#promociones">PROMOCIONES</a></li>
-                <li><a href="#trabajos">TRABAJOS</a></li>
-                <li><a href="#contacto">CONTACTO</a></li>
-            </ul>
-            <button class="ham" type="button" id="boton">
-                <span class="br-1"></span>
-                <span class="br-2"></span>
-                <span class="br-3"></span>
-            </button>
-        </nav>
+      <nav>
+        <a href="index.html"
+          ><img src="img/logo-150.jpeg" alt="logo" class="logo"
+        /></a>
+        <ul class="enlaces-menu" id="capa">
+          <li><a href="#inicio">INICIO</a></li>
+          <li><a href="#productos">PRODUCTOS</a></li>
+          <li><a href="#promociones">PROMOCIONES</a></li>
+          <li><a href="#trabajos">TRABAJOS</a></li>
+          <li><a href="#contacto">CONTACTO</a></li>
+        </ul>
+        <button class="ham" type="button" id="boton">
+          <span class="br-1"></span>
+          <span class="br-2"></span>
+          <span class="br-3"></span>
+        </button>
+      </nav>
     </header>
 
     <main>
-        <!-- seccion inicio -->
-        <section class="inicio" id="inicio">
-            <h1 class="h1-index">Buenos Aires ESTAMPADOS</h1>
-            <article>
-                <!--carrusel-->
-                <div class="cupon">
-                    <img src="img/cupon-descuento.jpeg" alt="imagen-del-cupon-de-descuento">
-                </div>
-            </article>
-            <h2>TRABAJAMOS A PEDIDO</h2>
-            <p>Trabajos 100% personalizados. 5 días hábiles de preparación. Retiro sin costo en fabrica. Envios
-                gratuitos a puntos de encuentro con la compra mayor a $10.000.</p>
-        </section>
+      <!-- seccion inicio -->
+      <section class="inicio" id="inicio">
+        <h1 class="h1-index">Buenos Aires ESTAMPADOS</h1>
+        <article>
+          <!--carrusel-->
+          <div class="cupon">
+            <img
+              src="img/cupon-descuento.jpeg"
+              alt="imagen-del-cupon-de-descuento"
+            />
+          </div>
+        </article>
+        <h2>TRABAJAMOS A PEDIDO</h2>
+        <p>
+          Trabajos 100% personalizados. 5 días hábiles de preparación. Retiro
+          sin costo en fabrica. Envios gratuitos a puntos de encuentro con la
+          compra mayor a $10.000.
+        </p>
+      </section>
 
-        <!-- seccion productos -->
+      <!-- seccion productos -->
 
-        <section class="productos" id="productos">
-            <h1 class="h1-productos">PRODUCTOS DESTACADOS</h1>
-            <div class="carrito-productos">
-                <h2>TU CARRITO</h2>
-                <button onclick="mostrarCarrito()">VER TOTAL</button>
-                <button onclick="vaciarCarrito()">VACIAR CARRITO</button>
-                <p id="resultado-final"></p>
-                <input placeholder="ingrese codigo de descuento" type="text" id="input-descuento">
-                <button onclick="aplicarDescuento()">APLICAR DESCUENTO</button>
+      <section class="productos" id="productos">
+        <h1 class="h1-productos">PRODUCTOS DESTACADOS</h1>
+        <div class="carrito-productos">
+          <h2>TU CARRITO</h2>
+          <button onclick="mostrarCarrito()">VER TOTAL</button>
+          <button onclick="vaciarCarrito()">VACIAR CARRITO</button>
+          <p id="resultado-final"></p>
+          <input
+            placeholder="ingrese codigo de descuento"
+            type="text"
+            id="input-descuento"
+          />
+          <button onclick="aplicarDescuento()">APLICAR DESCUENTO</button>
+        </div>
+        <article class="section-productos">
+          <section class="contenedor">
+            <div class="contenedor-items">
+              <div class="item">
+                <span class="titulo-item">REMERAS HOMBRE GRANDES</span>
+                <p class="descripcion-item">
+                  Remeras para hombre, talles XL, XXL y XXXL, estampado a
+                  elección.
+                </p>
+                <img
+                  src="img/remera-hombre-grande.jpeg"
+                  alt="imagen-remera-estampada-hombre-grande"
+                  class="img-item"
+                />
+                <span class="precio-item">$5000</span>
+                <button
+                  class="boton-img"
+                  onclick="agregar({nombre: 'REMERAS HOMBRE GRANDES', precio: 5000})"
+                >
+                  Agregar al carrito
+                </button>
+              </div>
             </div>
-            <article class="section-productos">
-                <section class="contenedor">
-                    <div class="contenedor-items">
-                        <div class="item">
-                            <span class="titulo-item">REMERAS HOMBRE GRANDES</span>
-                            <p class="descripcion-item">Remeras para hombre, talles XL, XXL y XXXL,
-                                estampado a elección.</p>
-                            <img src="img/remera-hombre-grande.jpeg" alt="imagen-remera-estampada-hombre-grande"
-                                class="img-item">
-                            <span class="precio-item">$5000</span>
-                            <button class="boton-img" onclick="agregar({nombre: 'REMERAS HOMBRE GRANDES', precio: 5000})">Agregar al
-                                carrito</button>
-                        </div>
-                    </div>
 
-                    <div class="contenedor-items">
-                        <div class="item">
-                            <span class="titulo-item">REMERAS HOMBRE</span>
-                            <p class="descripcion-item">Remeras estampadas para hombre, talles S, M y L, color y
-                                estampado a elección.</p>
-                            <img src="img/remera-homre.jpeg" alt="imagen-remera-estampada-hombre" class="img-item">
-                            <span class="precio-item">$4000</span>
-                            <button class="boton-img" onclick="agregar({nombre: 'REMERAS HOMBRE', precio: 4000})">Agregar al
-                                carrito</button>
-                        </div>
-                    </div>
-
-                    <div class="contenedor-items">
-                        <div class="item">
-                            <span class="titulo-item">REMERAS NIÑOS</span>
-                            <p class="descripcion-item">Remeras estampadas para niños/niñas, talles 0 a 7, color y
-                                estampado a elección.</p>
-                            <img src="img/remeras-ninios.jpeg" alt="imagen-remera-estampada-ninios" class="img-item">
-                            <span class="precio-item">$3000</span>
-                            <button class="boton-img" onclick="agregar({nombre: 'REMERAS NIÑOS', precio: 3000})">Agregar al
-                                carrito</button>
-                        </div>
-                    </div>
-
-                    <div class="contenedor-items">
-                        <div class="item">
-                            <span class="titulo-item">REMERAS MUJER</span>
-                            <p class="descripcion-item">Remeras estampadas para mujer, talles S, M y L, color y
-                                estampado a elección.</p>
-                            <img src="img/remera-mujer.jpeg" alt="imagen-remera-estampada-mujeres" class="img-item">
-                            <span class="precio-item">$4500</span>
-                            <button class="boton-img" onclick="agregar({nombre: 'REMERAS MUJER', precio: 4500})">Agregar al
-                                carrito</button>
-                        </div>
-                    </div>
-
-                    <div class="contenedor-items">
-                        <div class="item">
-                            <span class="titulo-item">REMERAS MUJER GRANDES</span>
-                            <p class="descripcion-item">Remeras estampadas para mujer, talles XL, XXL y XXXL color y
-                                estampado a elección.</p>
-                            <img src="img/remera-mujer-grande.jpeg" alt="imagen-remera-estampada-mujeres"
-                                class="img-item">
-                            <span class="precio-item" onclick="agregar({nombre: 'REMERAS MUJER GRANDES', precio: 5500})">$5500</span>
-                            <button class="boton-img">Agregar al carrito</button>
-                        </div>
-                    </div>
-
-                    <div class="contenedor-items">
-                        <div class="item">
-                            <span class="titulo-item">TAZAS PLÁSATICO / POCELANA</span>
-                            <p class="descripcion-item">Tazas estampadas con tematica y material a elección.</p>
-                            <img src="img/productos-taza-independiente.jpeg" alt="imagen-tazas-estampada"
-                                class="img-item">
-                            <span class="precio-item">$2500</span>
-                            <button class="boton-img" onclick="agregar({nombre: 'TAZAS', precio: 2500})">Agregar al
-                                carrito</button>
-                        </div>
-                    </div>
-
-                    <div class="contenedor-items">
-                        <div class="item">
-                            <span class="titulo-item">GORRAS HOMBRE - MUJER -NIÑOS</span>
-                            <p class="descripcion-item">Gorras unisex con color y estampado a elección, distintos
-                                talles.</p>
-                            <img src="img/gorras-estampadas.jpeg" alt="imagen-remera-estampada-mujeres"
-                                class="img-item">
-                            <span class="precio-item">$2000</span>
-                            <button class="boton-img" onclick="agregar({nombre: 'GORRAS', precio: 2000})">Agregar al
-                                carrito</button>
-                        </div>
-                    </div>
-
-                    <div class="contenedor-items">
-                        <div class="item">
-                            <span class="titulo-item">CUADROS EN MADERA</span>
-                            <p class="descripcion-item">Estampamos tu foto o diseño en una tabla de madera de 15cm x
-                                15cm.</p>
-                            <img src="img/cuadros-estampados.jpeg" alt="imagen-cuadro-estampado" class="img-item">
-                            <span class="precio-item">$1500</span>
-                            <button class="boton-img" onclick="agregar({nombre: 'CUADROS EN MADERA', precio: 1500})">Agregar al
-                                carrito</button>
-                        </div>
-                    </div>
-                </section>
-            </article>
-        </section>
-
-        <!-- seccion promociones -->
-
-        <section class="promociones" id="promociones">
-            <h1 class="h1-promociones">PROMOCIONES</h1>
-            <article class="section-promociones">
-                <section class="contenedor-promo">
-                    <div class="contenedor-items-promo">
-                        <div class="item-promo">
-                            <span class="titulo-item">REMERAS</span>
-                            <p class="descripcion-item">Llevando 3 remeras a elección tenes un 10% de descuento en
-                                el total.</p>
-                            <img src="img/promo-remeras.jpeg" alt="imagen-remera-estampada-hombre-grande"
-                                class="img-item">
-                            <span class="precio-item">$10.800</span>
-                            <button class="boton-img-promo">Agregar al carrito</button>
-                        </div>
-                    </div>
-
-                    <div class="contenedor-items-promo">
-                        <div class="item-promo">
-                            <span class="titulo-item">REMERAS NIÑOS</span>
-                            <p class="descripcion-item">Llevando 5 remeras a elección, llevate de regalo una taza
-                                con tu nombre!.</p>
-                            <img src="img/promo-ninios.jpeg" alt="imagen-remera-estampada-hombre-grande"
-                                class="img-item">
-                            <span class="precio-item">$15.000</span>
-                            <button class="boton-img-promo">Agregar al carrito</button>
-                        </div>
-                    </div>
-
-                    <div class="contenedor-items-promo">
-                        <div class="item-promo">
-                            <span class="titulo-item">PROMO PAPÁ</span>
-                            <p class="descripcion-item">Kit dos remeras grandes, una gorra y un cuadro</p>
-                            <img src="img/promo-papa.jpeg" alt="imagen-remera-estampada-hombre-grande" class="img-item">
-                            <span class="precio-item">$10.000</span>
-                            <button class="boton-img-promo">Agregar al carrito</button>
-                        </div>
-                    </div>
-                    <div class="contenedor-items-promo">
-                        <div class="item-promo">
-                            <span class="titulo-item">PROMO MAMÁ</span>
-                            <p class="descripcion-item">Kit dos remeras, una taza y un cuadro</p>
-                            <img src="img/promo-mama.jpg" alt="imagen-remera-estampada-hombre-grande" class="img-item">
-                            <span class="precio-item">$13.000</span>
-                            <button class="boton-img-promo">Agregar al carrito</button>
-                        </div>
-                    </div>
-                    <div class="contenedor-items-promo">
-                        <div class="item-promo">
-                            <span class="titulo-item">PROMO FUTBOLERA</span>
-                            <p class="descripcion-item">Remera mas taza</p>
-                            <img src="img/promo-futbolera.jpeg" alt="imagen-remera-estampada-y-taza" class="img-item">
-                            <span class="precio-item">$7.000</span>
-                            <button class="boton-img-promo">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </section>
-            </article>
-        </section>
-
-        <!-- seccion trabajos -->
-
-        <section class="section-trabajos" id="trabajos">
-            <h1 class="h1-trabajos">NUESTROS TRABAJOS</h1>
-            <p>Te mostramos algunos de nuestros trabajos más pedidos!</p>
-            <div class="grilla-trabajos">
-                <div class="items">
-                    <img src="img/cuadro-trabajos.jpeg" alt="imagen-trabajos-cuadro" class="trabajos">
-                    <img src="img/gorra-trabajos.jpeg" alt="imagen-trabajos-gorra" class="trabajos">
-                    <img src="img/remera-trabajos.jpeg" alt="imagen-trabajos-remera" class="trabajos">
-                    <img src="img/taza-trabajos.jpeg" alt="imagen-trabajos-taza" class="trabajos">
-                    <img src="img/taza-trabajos2.jpeg" alt="imagen-trabajos-taza2" class="trabajos">
-                    <img src="img/remera-trabajos2.jpeg" alt="imagen-trabajos-remera2" class="trabajos">
-                </div>
+            <div class="contenedor-items">
+              <div class="item">
+                <span class="titulo-item">REMERAS HOMBRE</span>
+                <p class="descripcion-item">
+                  Remeras estampadas para hombre, talles S, M y L, color y
+                  estampado a elección.
+                </p>
+                <img
+                  src="img/remera-homre.jpeg"
+                  alt="imagen-remera-estampada-hombre"
+                  class="img-item"
+                />
+                <span class="precio-item">$4000</span>
+                <button
+                  class="boton-img"
+                  onclick="agregar({nombre: 'REMERAS HOMBRE', precio: 4000})"
+                >
+                  Agregar al carrito
+                </button>
+              </div>
             </div>
+
+            <div class="contenedor-items">
+              <div class="item">
+                <span class="titulo-item">REMERAS NIÑOS</span>
+                <p class="descripcion-item">
+                  Remeras estampadas para niños/niñas, talles 0 a 7, color y
+                  estampado a elección.
+                </p>
+                <img
+                  src="img/remeras-ninios.jpeg"
+                  alt="imagen-remera-estampada-ninios"
+                  class="img-item"
+                />
+                <span class="precio-item">$3000</span>
+                <button
+                  class="boton-img"
+                  onclick="agregar({nombre: 'REMERAS NIÑOS', precio: 3000})"
+                >
+                  Agregar al carrito
+                </button>
+              </div>
+            </div>
+
+            <div class="contenedor-items">
+              <div class="item">
+                <span class="titulo-item">REMERAS MUJER</span>
+                <p class="descripcion-item">
+                  Remeras estampadas para mujer, talles S, M y L, color y
+                  estampado a elección.
+                </p>
+                <img
+                  src="img/remera-mujer.jpeg"
+                  alt="imagen-remera-estampada-mujeres"
+                  class="img-item"
+                />
+                <span class="precio-item">$4500</span>
+                <button
+                  class="boton-img"
+                  onclick="agregar({nombre: 'REMERAS MUJER', precio: 4500})"
+                >
+                  Agregar al carrito
+                </button>
+              </div>
+            </div>
+
+            <div class="contenedor-items">
+              <div class="item">
+                <span class="titulo-item">REMERAS MUJER GRANDES</span>
+                <p class="descripcion-item">
+                  Remeras estampadas para mujer, talles XL, XXL y XXXL color y
+                  estampado a elección.
+                </p>
+                <img
+                  src="img/remera-mujer-grande.jpeg"
+                  alt="imagen-remera-estampada-mujeres"
+                  class="img-item"
+                />
+                <span
+                  class="precio-item"
+                  onclick="agregar({nombre: 'REMERAS MUJER GRANDES', precio: 5500})"
+                  >$5500</span
+                >
+                <button class="boton-img">Agregar al carrito</button>
+              </div>
+            </div>
+
+            <div class="contenedor-items">
+              <div class="item">
+                <span class="titulo-item">TAZAS PLÁSATICO / POCELANA</span>
+                <p class="descripcion-item">
+                  Tazas estampadas con tematica y material a elección.
+                </p>
+                <img
+                  src="img/productos-taza-independiente.jpeg"
+                  alt="imagen-tazas-estampada"
+                  class="img-item"
+                />
+                <span class="precio-item">$2500</span>
+                <button
+                  class="boton-img"
+                  onclick="agregar({nombre: 'TAZAS', precio: 2500})"
+                >
+                  Agregar al carrito
+                </button>
+              </div>
+            </div>
+
+            <div class="contenedor-items">
+              <div class="item">
+                <span class="titulo-item">GORRAS HOMBRE - MUJER -NIÑOS</span>
+                <p class="descripcion-item">
+                  Gorras unisex con color y estampado a elección, distintos
+                  talles.
+                </p>
+                <img
+                  src="img/gorras-estampadas.jpeg"
+                  alt="imagen-remera-estampada-mujeres"
+                  class="img-item"
+                />
+                <span class="precio-item">$2000</span>
+                <button
+                  class="boton-img"
+                  onclick="agregar({nombre: 'GORRAS', precio: 2000})"
+                >
+                  Agregar al carrito
+                </button>
+              </div>
+            </div>
+
+            <div class="contenedor-items">
+              <div class="item">
+                <span class="titulo-item">CUADROS EN MADERA</span>
+                <p class="descripcion-item">
+                  Estampamos tu foto o diseño en una tabla de madera de 15cm x
+                  15cm.
+                </p>
+                <img
+                  src="img/cuadros-estampados.jpeg"
+                  alt="imagen-cuadro-estampado"
+                  class="img-item"
+                />
+                <span class="precio-item">$1500</span>
+                <button
+                  class="boton-img"
+                  onclick="agregar({nombre: 'CUADROS EN MADERA', precio: 1500})"
+                >
+                  Agregar al carrito
+                </button>
+              </div>
+            </div>
+          </section>
+        </article>
+      </section>
+
+      <!-- seccion promociones -->
+
+      <section class="promociones" id="promociones">
+        <h1 class="h1-promociones">PROMOCIONES</h1>
+        <article class="section-promociones">
+          <section class="contenedor-promo">
+            <div class="contenedor-items-promo">
+              <div class="item-promo">
+                <span class="titulo-item">REMERAS</span>
+                <p class="descripcion-item">
+                  Llevando 3 remeras a elección tenes un 10% de descuento en el
+                  total.
+                </p>
+                <img
+                  src="img/promo-remeras.jpeg"
+                  alt="imagen-remera-estampada-hombre-grande"
+                  class="img-item"
+                />
+                <span class="precio-item">$10.800</span>
+                <button class="boton-img-promo">Agregar al carrito</button>
+              </div>
+            </div>
+
+            <div class="contenedor-items-promo">
+              <div class="item-promo">
+                <span class="titulo-item">REMERAS NIÑOS</span>
+                <p class="descripcion-item">
+                  Llevando 5 remeras a elección, llevate de regalo una taza con
+                  tu nombre!.
+                </p>
+                <img
+                  src="img/promo-ninios.jpeg"
+                  alt="imagen-remera-estampada-hombre-grande"
+                  class="img-item"
+                />
+                <span class="precio-item">$15.000</span>
+                <button class="boton-img-promo">Agregar al carrito</button>
+              </div>
+            </div>
+
+            <div class="contenedor-items-promo">
+              <div class="item-promo">
+                <span class="titulo-item">PROMO PAPÁ</span>
+                <p class="descripcion-item">
+                  Kit dos remeras grandes, una gorra y un cuadro
+                </p>
+                <img
+                  src="img/promo-papa.jpeg"
+                  alt="imagen-remera-estampada-hombre-grande"
+                  class="img-item"
+                />
+                <span class="precio-item">$10.000</span>
+                <button class="boton-img-promo">Agregar al carrito</button>
+              </div>
+            </div>
+            <div class="contenedor-items-promo">
+              <div class="item-promo">
+                <span class="titulo-item">PROMO MAMÁ</span>
+                <p class="descripcion-item">
+                  Kit dos remeras, una taza y un cuadro
+                </p>
+                <img
+                  src="img/promo-mama.jpg"
+                  alt="imagen-remera-estampada-hombre-grande"
+                  class="img-item"
+                />
+                <span class="precio-item">$13.000</span>
+                <button class="boton-img-promo">Agregar al carrito</button>
+              </div>
+            </div>
+            <div class="contenedor-items-promo">
+              <div class="item-promo">
+                <span class="titulo-item">PROMO FUTBOLERA</span>
+                <p class="descripcion-item">Remera mas taza</p>
+                <img
+                  src="img/promo-futbolera.jpeg"
+                  alt="imagen-remera-estampada-y-taza"
+                  class="img-item"
+                />
+                <span class="precio-item">$7.000</span>
+                <button class="boton-img-promo">Agregar al carrito</button>
+              </div>
+            </div>
+          </section>
+        </article>
+      </section>
+
+      <!-- seccion trabajos -->
+
+      <section class="section-trabajos" id="trabajos">
+        <h1 class="h1-trabajos">NUESTROS TRABAJOS</h1>
+        <p>Te mostramos algunos de nuestros trabajos más pedidos!</p>
+        <div class="grilla-trabajos">
+          <div class="items">
+            <img
+              src="img/cuadro-trabajos.jpeg"
+              alt="imagen-trabajos-cuadro"
+              class="trabajos"
+            />
+            <img
+              src="img/gorra-trabajos.jpeg"
+              alt="imagen-trabajos-gorra"
+              class="trabajos"
+            />
+            <img
+              src="img/remera-trabajos.jpeg"
+              alt="imagen-trabajos-remera"
+              class="trabajos"
+            />
+            <img
+              src="img/taza-trabajos.jpeg"
+              alt="imagen-trabajos-taza"
+              class="trabajos"
+            />
+            <img
+              src="img/taza-trabajos2.jpeg"
+              alt="imagen-trabajos-taza2"
+              class="trabajos"
+            />
+            <img
+              src="img/remera-trabajos2.jpeg"
+              alt="imagen-trabajos-remera2"
+              class="trabajos"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- seccion contacto -->
+
+      <section class="section-contacto" id="contacto">
+        <h1 class="h1-contacto">CONTACTO</h1>
+        <p>Punto de retiro en fabrica - (direccion)</p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26228.70621714309!2d-58.2369137441018!3d-34.740771089760884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32e38e45f5777%3A0x6a86dac21334524f!2sQuilmes%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1686274245040!5m2!1ses!2sar"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <section class="formulario">
+          <form class="contactanos">
+            <p class="p-contacto-formulario">
+              ¿Alguna duda? Dejanos un mensaje y nosotros te contactamos!
+            </p>
+            <div class="c-formulario">
+              <div class="div-formulario">
+                <label for="nombre">Nombre</label>
+              </div>
+              <div class="div-formulario">
+                <input
+                  class="formulario"
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                />
+              </div>
+              <div class="div-formulario">
+                <label for="mail">Email</label>
+              </div>
+              <div>
+                <input class="formulario" type="email" id="mail" name="mail" />
+              </div>
+              <div class="div-formulario">
+                <label for="telefono">Telefono</label>
+              </div>
+              <div class="div-formulario">
+                <input
+                  class="formulario"
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                />
+              </div>
+              <div class="div-formulario">
+                <label for="mensaje">¿En que podemos ayudarte?</label>
+              </div>
+              <div class="div-formulario">
+                <textarea type="text" id="mensaje" name="mensaje"></textarea>
+              </div>
+            </div>
+            <div>
+              <button class="boton-enviar">
+                <input type="submit" class="boton-formulario" value="ENVIAR" />
+              </button>
+            </div>
+          </form>
         </section>
 
-        <!-- seccion contacto -->
+        <!-- seccion medios -->
 
-        <section class="section-contacto" id="contacto">
-            <h1 class="h1-contacto">CONTACTO</h1>
-            <p>Punto de retiro en fabrica - (direccion)</p>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26228.70621714309!2d-58.2369137441018!3d-34.740771089760884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32e38e45f5777%3A0x6a86dac21334524f!2sQuilmes%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1686274245040!5m2!1ses!2sar"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <section class="formulario">
-                <form class="contactanos">
-                    <p class="p-contacto-formulario">¿Alguna duda? Dejanos un mensaje y nosotros te contactamos!</p>
-                    <div class="c-formulario">
-                        <div class="div-formulario">
-                            <label for="nombre">Nombre</label>
-                        </div>
-                        <div class="div-formulario">
-                            <input class="formulario" type="text" id="nombre" name="nombre"></br>
-                        </div>
-                        <div class="div-formulario">
-                            <label for="mail">Email</label>
-                        </div>
-                        <div>
-                            <input class="formulario" type="email" id="mail" name="mail"></br>
-                        </div class="div-formulario">
-                        <div class="div-formulario">
-                            <label for="telefono">Telefono</label>
-                        </div>
-                        <div class="div-formulario">
-                            <input class="formulario" type="tel" id="telefono" name="telefono"></br>
-                        </div>
-                        <div class="div-formulario">
-                            <label for="mensaje">¿En que podemos ayudarte?</label>
-                        </div>
-                        <div class="div-formulario">
-                            <textarea type="text" id="mensaje" name="mensaje"></textarea></br>
-                        </div>
-                    </div>
-                    <div>
-                        <button class="boton-enviar">
-                            <input type="submit" class="boton-formulario" value="ENVIAR">
-                        </button>
-                    </div>
-                </form>
-            </section>
-
-            <!-- seccion medios -->
-
-            <article class="medios">
-                <div class="envios">
-                    <img src="img/camioncito-envios.jpeg" alt="camion-de-envios">
-                    <p>Envios gratuitos a puntos de encuentro con la compra mayor a $10.000</p>
-                </div>
-                <div class="telefono">
-                    <img src="img/telefono.jpeg" alt="telefono">
-                    <p> Días de atención lunes a sábados. Contestamos dentro de las 24hs.</p>
-                </div>
-                <div class="descuento">
-                    <img src="img/descuentos.jpeg" alt="descuento">
-                    <p> Increíbles descuentos utilizando los códigos 'flor' y 'zoe'.</p>
-                </div>
-            </article>
-        </section>
+        <article class="medios">
+          <div class="envios">
+            <img src="img/camioncito-envios.jpeg" alt="camion-de-envios" />
+            <p>
+              Envios gratuitos a puntos de encuentro con la compra mayor a
+              $10.000
+            </p>
+          </div>
+          <div class="telefono">
+            <img src="img/telefono.jpeg" alt="telefono" />
+            <p>
+              Días de atención lunes a sábados. Contestamos dentro de las 24hs.
+            </p>
+          </div>
+          <div class="descuento">
+            <img src="img/descuentos.jpeg" alt="descuento" />
+            <p>Increíbles descuentos utilizando los códigos 'flor' y 'zoe'.</p>
+          </div>
+        </article>
+      </section>
     </main>
 
     <footer class="footer">
-        <span>
-            <address>
-                <div class="instagram-footer">
-                    <p>¿Nos seguimos?</p>
-                    <a href="https://www.instagram.com/baestampado/" target=blank><img src="img/instagram.png"
-                            alt="Logo de instagram"></a>
-                    <p></p>
-                </div>
-            </address>
-        </span>
-        <div class="logo-footer">
-            <img src="img/logo-150.jpeg" alt="Logo de la marca">
-        </div>
-        <span>
-            <address>
-                <div class="whatsapp-footer">
-                    <p>Estamos en contacto</p>
-                    <a href="https://wa.me/541162729656?text=Hola%20BA-Estampados.%20Necesito%20informaci%C3%B3n%20sobre..."
-                        target=blank><img src="img/whatsapp.png" alt="logo de whatsapp"></a>
-                    <p></p>
-                </div>
-            </address>
-        </span>
+      <span>
+        <address>
+          <div class="instagram-footer">
+            <p>¿Nos seguimos?</p>
+            <a href="https://www.instagram.com/baestampado/" target="blank"
+              ><img src="img/instagram.png" alt="Logo de instagram"
+            /></a>
+            <p></p>
+          </div>
+        </address>
+      </span>
+      <div class="logo-footer">
+        <img src="img/logo-150.jpeg" alt="Logo de la marca" />
+      </div>
+      <span>
+        <address>
+          <div class="whatsapp-footer">
+            <p>Estamos en contacto</p>
+            <a
+              href="https://wa.me/541162729656?text=Hola%20BA-Estampados.%20Necesito%20informaci%C3%B3n%20sobre..."
+              target="blank"
+              ><img src="img/whatsapp.png" alt="logo de whatsapp"
+            /></a>
+            <p></p>
+          </div>
+        </address>
+      </span>
     </footer>
     <script src="./js/main.js"></script>
-</body>
-
+  </body>
 </html>

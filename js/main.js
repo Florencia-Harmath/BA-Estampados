@@ -60,3 +60,41 @@ function aplicarDescuento() {
   descuento = DESCUENTOS[input.value.toLowerCase()];
   alert("Descuento aplicado correctamente. Presione 'ver total' nuevamente");
 }
+
+
+
+
+
+let form = document.getElementById("myForm");
+
+let submitButton = document.getElementById("submitButton");
+
+ 
+
+ 
+
+// //Agregar un evento al boton
+
+// submitButton.addEventListener("click",function(e){
+
+//   e.preventDefault();
+
+ 
+
+ 
+
+//   let nombreInput = document.getElementById("name");
+
+//   let emailInput = document.getElementById("email");
+
+ 
+
+//   let nombre = nombreInput.value;  
+
+//   let email = emailInput.value;
+
+ 
+
+//   console.log("Este es el nombre que mando al back "+ nombre + "y este es es el email "+ email);
+
+// })

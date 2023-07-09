@@ -54,13 +54,19 @@
 
     <section class="productos" id="productos">
       <h1 class="h1-productos">PRODUCTOS DESTACADOS</h1>
+      
       <div class="carrito-productos">
-        <h2>TU CARRITO</h2>
-        <button onclick="mostrarCarrito()">VER TOTAL</button>
-        <button onclick="vaciarCarrito()">VACIAR CARRITO</button>
-        <p id="resultado-final"></p>
-        <input placeholder="ingrese codigo de descuento" type="text" id="input-descuento" />
-        <button onclick="aplicarDescuento()">APLICAR DESCUENTO</button>
+        <h2>Contenido del carrito:</h2>
+        <div id="carrito"></div>
+
+        <h2>Total de la compra:</h2>
+        <div id="totalCompra">$0</div>
+
+        <h2>Aplicar descuento:</h2>
+        <input type="text" id="descuentoInput" placeholder="Ingresa la palabra de descuento" />
+        <button onclick="aplicarDescuento()">Aplicar Descuento</button>
+
+        <button onclick="vaciarCarrito()">Vaciar carrito</button>
       </div>
       <article class="section-productos">
         <section class="contenedor">

@@ -13,88 +13,92 @@ ham.addEventListener("click", () => {
 
 //carrito
 
-let carrito = [];
-let descuento = 0;
+let carrito = {};
+let totalCompra = 0;
 
-const p = document.getElementById("resultado-final");
-const input = document.getElementById("input-descuento");
+const storedCarrito = localStorage.getItem("carrito");
+const storedTotalCompra = localStorage.getItem("totalCompra");
 
-const DESCUENTOS = {
-  zoe: 200,
-  flor: 1000,
-};
-
-function agregar(producto) {
-  carrito.push(producto);
-  console.log(carrito);
-  alert("producto agregado correctamente");
+if (storedCarrito) {
+  carrito = JSON.parse(storedCarrito);
 }
 
-function vaciarCarrito() {
-  carrito = [];
-  p.innerHTML = "Carrito vacio";
+totalCompra = parseInt(storedTotalCompra) || 0;
+mostrarCarrito();
+mostrarTotalCompra();
+
+function agregar(producto) {
+  const { nombre, precio } = producto;
+
+  carrito.hasOwnProperty(nombre)
+    ? carrito[nombre].cantidad++
+    : (carrito[nombre] = { precio, cantidad: 1 });
+
+  totalCompra += precio;
+  mostrarCarrito();
+  mostrarTotalCompra();
+  alert("Producto agregado correctamente");
+
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  localStorage.setItem("totalCompra", totalCompra.toString());
 }
 
 function mostrarCarrito() {
-  if (carrito.length === 0) {
-    p.innerHTML = "No hay productos";
-    return;
+  const carritoElement = document.getElementById("carrito");
+  carritoElement.innerHTML = ""; 
+
+  if (Object.keys(carrito).length === 0) {
+    const item = document.createElement("div");
+    item.className = "item";
+    item.innerHTML = '<span>No hay productos</span>';
+    carritoElement.appendChild(item);
+  } else {
+    for (const [nombreProducto, producto] of Object.entries(carrito)) {
+      const { precio, cantidad } = producto;
+      const item = document.createElement("div");
+      item.className = "item";
+      item.innerHTML = `<span>${nombreProducto}</span> - <span>$${precio}</span> - <span>Cantidad: ${cantidad}</span>`;
+      carritoElement.appendChild(item);
+    }
   }
-  let resultadoFinal = 0;
-  for (let i = 0; i < carrito.length; i++) {
-    const producto = carrito[i];
-    const precioProducto = producto.precio;
-    resultadoFinal += precioProducto;
-  }
-  p.innerHTML = "PRECIO FINAL : " + (resultadoFinal - descuento);
+}
+
+function mostrarTotalCompra() {
+  const totalElement = document.getElementById("totalCompra");
+  totalElement.innerHTML = `$${totalCompra}`;
 }
 
 function aplicarDescuento() {
-  // inNaN() devuelve true si el valor no es un numero
-  // si el valor es un numero devuelve false
+  const descuentoInput = document.getElementById("descuentoInput");
+  const descuentoPalabra = descuentoInput.value.trim().toLowerCase();
+  let descuento = 0;
 
-  if (!isNaN(input.value)) {
-    alert("descuento invalido: descuentos validos 'zoe' y 'flor'");
-    return;
+  switch (descuentoPalabra) {
+    case "flor":
+      descuento = 2000;
+      break;
+    case "zoe":
+      descuento = 1500;
+      break;
+    default:
+      break;
   }
-  descuento = DESCUENTOS[input.value.toLowerCase()];
-  alert("Descuento aplicado correctamente. Presione 'ver total' nuevamente");
+
+  if (descuento > 0) {
+    totalCompra -= descuento;
+    mostrarTotalCompra();
+    alert("Descuento aplicado correctamente");
+  } else {
+    alert("Lo siento, ese codigo no posee descuento");
+  }
 }
 
+function vaciarCarrito() {
+  carrito = {};
+  totalCompra = 0;
+  mostrarCarrito();
+  mostrarTotalCompra();
 
-
-
-
-let form = document.getElementById("myForm");
-
-let submitButton = document.getElementById("submitButton");
-
- 
-
- 
-
-// //Agregar un evento al boton
-
-// submitButton.addEventListener("click",function(e){
-
-//   e.preventDefault();
-
- 
-
- 
-
-//   let nombreInput = document.getElementById("name");
-
-//   let emailInput = document.getElementById("email");
-
- 
-
-//   let nombre = nombreInput.value;  
-
-//   let email = emailInput.value;
-
- 
-
-//   console.log("Este es el nombre que mando al back "+ nombre + "y este es es el email "+ email);
-
-// })
+  localStorage.removeItem("carrito");
+  localStorage.removeItem("totalCompra");
+}

@@ -19,6 +19,12 @@ let totalCompra = 0;
 const storedCarrito = localStorage.getItem("carrito");
 const storedTotalCompra = localStorage.getItem("totalCompra");
 
+let descuentoAplicado = localStorage.getItem("descuentoAplicado") === "true";
+const descuentos = {
+  flor: 2000,
+  zoe: 1500
+};
+
 if (storedCarrito) {
   carrito = JSON.parse(storedCarrito);
 }
@@ -45,7 +51,7 @@ function agregar(producto) {
 
 function mostrarCarrito() {
   const carritoElement = document.getElementById("carrito");
-  carritoElement.innerHTML = ""; 
+  carritoElement.innerHTML = "";
 
   if (Object.keys(carrito).length === 0) {
     const item = document.createElement("div");
@@ -73,23 +79,28 @@ function aplicarDescuento() {
   const descuentoPalabra = descuentoInput.value.trim().toLowerCase();
   let descuento = 0;
 
-  switch (descuentoPalabra) {
-    case "flor":
-      descuento = 2000;
-      break;
-    case "zoe":
-      descuento = 1500;
-      break;
-    default:
-      break;
+  if (descuentoAplicado) {
+    alert("Ya se ha aplicado un descuento en esta compra.");
+    return;
+  }
+
+  if (descuentoPalabra in descuentos) {
+    descuento = descuentos[descuentoPalabra];
+    descuentoAplicado = true;
+  }
+
+  if (totalCompra < descuento) {
+    alert("El descuento no puede ser mayor que la compra");
+    return;
   }
 
   if (descuento > 0) {
     totalCompra -= descuento;
     mostrarTotalCompra();
     alert("Descuento aplicado correctamente");
+    localStorage.setItem("descuentoAplicado", true);
   } else {
-    alert("Lo siento, ese codigo no posee descuento");
+    alert("Lo siento, ese código no posee descuento");
   }
 }
 
@@ -98,7 +109,9 @@ function vaciarCarrito() {
   totalCompra = 0;
   mostrarCarrito();
   mostrarTotalCompra();
+  alert("Carrito vaciado correctamente");
 
+  localStorage.removeItem("descuentoAplicado");
   localStorage.removeItem("carrito");
   localStorage.removeItem("totalCompra");
 }

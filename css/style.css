@@ -31,6 +31,14 @@ h1 {
   padding: 0.5em;
 }
 
+h2 {
+  color: black;
+  font-weight: bolder;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 0.5em;
+}
+
 @media (min-width: 620px) {
   main {
     margin-top: 170px;
@@ -79,6 +87,7 @@ h1 {
   outline: none;
   padding: 0.3em;
   border: 1px solid yellowgreen;
+  margin: 10px;
 }
 .contactanos .p-contacto-formulario {
   text-align: center;
@@ -95,6 +104,7 @@ h1 {
   border-radius: 4px;
   resize: none;
   border: 1px solid yellowgreen;
+  margin: 10px auto;
 }
 
 .c-formulario {
@@ -111,9 +121,12 @@ h1 {
   display: flex;
   margin: auto;
   justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 .boton-enviar :hover {
-  transform: scale(1.1, 1.1);
+  cursor: pointer;
+  background-color: rgba(126, 252, 0, 0.658);
 }
 .boton-enviar input {
   font-size: 1rem;
@@ -168,10 +181,10 @@ h1 {
   margin-left: 50px;
 }
 
-@media (min-width: 620px) {
+@media (min-width: 1024px) {
   .contactanos {
     display: block;
-    width: 80%;
+    width: 50%;
     height: 40%;
     padding: 3em;
   }
@@ -312,7 +325,7 @@ h1 {
   padding: 1em;
 }
 
-@media (min-width: 620px) {
+@media (min-width: 1024px) {
   .grilla-trabajos .items {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -725,6 +738,67 @@ nav {
     font-size: 1.8rem;
     margin-top: 30px;
     font-weight: bolder;
+  }
+}
+.carrito-productos {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  background-color: black;
+  border-radius: 10px;
+  border: 2px solid rgba(21, 135, 173, 0.89);
+}
+.carrito-productos h2 {
+  background-color: rgba(21, 135, 173, 0.89);
+}
+.carrito-productos div {
+  font-size: 1.1rem;
+  color: white;
+  margin: 15px;
+  text-align: justify;
+}
+.carrito-productos .total-compra {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.5em;
+  color: white;
+}
+.carrito-productos input {
+  width: 60%;
+  display: flex;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  padding: 1em;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+.carrito-productos button {
+  width: 40%;
+  display: flex;
+  margin: auto;
+  border: 1px solid black;
+  padding: 1em;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.carrito-productos button:hover {
+  background-color: rgba(21, 135, 173, 0.534);
+  color: white;
+}
+
+@media (min-width: 1024px) {
+  .carrito-productos {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 100px;
   }
 }
 

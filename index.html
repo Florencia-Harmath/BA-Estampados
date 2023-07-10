@@ -39,7 +39,7 @@
       <article>
         <!--carrusel-->
         <div class="cupon">
-          <img src="img/cupon-descuento.jpeg" alt="imagen-del-cupon-de-descuento" />
+          <img src="" alt="imagen-del-cupon-de-descuento" />
         </div>
       </article>
       <h2>TRABAJAMOS A PEDIDO</h2>
@@ -52,22 +52,22 @@
 
     <!-- seccion productos -->
 
+    <div class="carrito-productos">
+      <h2>Contenido del carrito:</h2>
+      <div id="carrito"></div>
+
+      <h2>Total de la compra:</h2>
+      <div class="total-compra" id="totalCompra">$0</div>
+
+      <h2>Aplicar descuento:</h2>
+      <input type="text" id="descuentoInput" placeholder="Ingresa la palabra de descuento" />
+      <button onclick="aplicarDescuento()">Aplicar Descuento</button>
+
+      <button onclick="vaciarCarrito()">Vaciar carrito</button>
+    </div>
+
     <section class="productos" id="productos">
       <h1 class="h1-productos">PRODUCTOS DESTACADOS</h1>
-      
-      <div class="carrito-productos">
-        <h2>Contenido del carrito:</h2>
-        <div id="carrito"></div>
-
-        <h2>Total de la compra:</h2>
-        <div id="totalCompra">$0</div>
-
-        <h2>Aplicar descuento:</h2>
-        <input type="text" id="descuentoInput" placeholder="Ingresa la palabra de descuento" />
-        <button onclick="aplicarDescuento()">Aplicar Descuento</button>
-
-        <button onclick="vaciarCarrito()">Vaciar carrito</button>
-      </div>
       <article class="section-productos">
         <section class="contenedor">
           <div class="contenedor-items">
@@ -199,7 +199,7 @@
         <section class="contenedor-promo">
           <div class="contenedor-items-promo">
             <div class="item-promo">
-              <span class="titulo-item">REMERAS</span>
+              <span class="titulo-item">PROMO REMERAS</span>
               <p class="descripcion-item">
                 Llevando 3 remeras a elección tenes un 10% de descuento en el
                 total.
@@ -212,7 +212,7 @@
 
           <div class="contenedor-items-promo">
             <div class="item-promo">
-              <span class="titulo-item">REMERAS NIÑOS</span>
+              <span class="titulo-item">PROMO REMERAS NIÑOS</span>
               <p class="descripcion-item">
                 Llevando 5 remeras a elección, llevate de regalo una taza con
                 tu nombre!.

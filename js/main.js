@@ -99,6 +99,7 @@ function aplicarDescuento() {
     alert("Descuento aplicado correctamente");
     descuentoAplicado = true;
     localStorage.setItem("descuentoAplicado", true);
+
   } else {
     alert("Lo siento, ese código no posee descuento");
   }
@@ -116,4 +117,23 @@ function vaciarCarrito() {
   localStorage.removeItem("carrito");
   localStorage.removeItem("totalCompra");
 }
+
+//validacion de formulario
+
+const formulario = document.getElementById('formulario');
+const nombreInput = document.getElementById('nombre');
+const emailInput = document.getElementById('mail');
+const telefonoInput = document.getElementById('telefono');
+const mensajeInput = document.getElementById('mensaje');
+
+
+formulario.addEventListener('submit', function(event) {
+  if (nombreInput.value === '' || emailInput.value === '' || telefonoInput.value === '' || mensajeInput.value === '') {
+    alert('Por favor, completa todos los campos del formulario.');
+    event.preventDefault(); 
+  } else {
+    alert('Formulario enviado correctamente.');
+  }
+});
+
 

@@ -39,7 +39,7 @@
       <article>
         <!--carrusel-->
         <div class="cupon">
-          <img src="" alt="imagen-del-cupon-de-descuento" />
+          <img src="img/cupon-descuentos.jpeg" alt="imagen-del-cupon-de-descuento" />
         </div>
       </article>
       <h2>TRABAJAMOS A PEDIDO</h2>
@@ -64,6 +64,8 @@
       <button onclick="aplicarDescuento()">Aplicar Descuento</button>
 
       <button onclick="vaciarCarrito()">Vaciar carrito</button>
+
+      <button onclick="iniciarCompra()">Iniciar compra</button>
     </div>
 
     <section class="productos" id="productos">
@@ -206,7 +208,7 @@
               </p>
               <img src="img/promo-remeras.jpeg" alt="imagen-remera-estampada-hombre-grande" class="img-item" />
               <span class="precio-item">$10.800</span>
-              <button class="boton-img-promo">Agregar al carrito</button>
+              <button class="boton-img-promo" onclick="agregar({nombre: 'PROMO REMERAS', precio: 10800})">Agregar al carrito</button>
             </div>
           </div>
 
@@ -219,7 +221,7 @@
               </p>
               <img src="img/promo-ninios.jpeg" alt="imagen-remera-estampada-hombre-grande" class="img-item" />
               <span class="precio-item">$15.000</span>
-              <button class="boton-img-promo">Agregar al carrito</button>
+              <button class="boton-img-promo" onclick="agregar({nombre: 'PROMO REMERAS NIÑOS', precio: 15000})"> Agregar al carrito</button>
             </div>
           </div>
 
@@ -231,7 +233,7 @@
               </p>
               <img src="img/promo-papa.jpeg" alt="imagen-remera-estampada-hombre-grande" class="img-item" />
               <span class="precio-item">$10.000</span>
-              <button class="boton-img-promo">Agregar al carrito</button>
+              <button class="boton-img-promo" onclick="agregar({nombre: 'PROMO PAPA', precio: 10000})">Agregar al carrito</button>
             </div>
           </div>
           <div class="contenedor-items-promo">
@@ -242,7 +244,7 @@
               </p>
               <img src="img/promo-mama.jpg" alt="imagen-remera-estampada-hombre-grande" class="img-item" />
               <span class="precio-item">$13.000</span>
-              <button class="boton-img-promo">Agregar al carrito</button>
+              <button class="boton-img-promo" onclick="agregar({nombre: 'PROMO MAMA', precio: 13000})">Agregar al carrito</button>
             </div>
           </div>
           <div class="contenedor-items-promo">
@@ -251,7 +253,7 @@
               <p class="descripcion-item">Remera mas taza</p>
               <img src="img/promo-futbolera.jpeg" alt="imagen-remera-estampada-y-taza" class="img-item" />
               <span class="precio-item">$7.000</span>
-              <button class="boton-img-promo">Agregar al carrito</button>
+              <button class="boton-img-promo" onclick="agregar({nombre: 'PROMO FUTBOLERA', precio: 7000})">Agregar al carrito</button>
             </div>
           </div>
         </section>
@@ -285,7 +287,7 @@
         width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
       <section class="formulario">
-        <form class="contactanos">
+        <form class="contactanos" id="formulario">
           <p class="p-contacto-formulario">
             ¿Alguna duda? Dejanos un mensaje y nosotros te contactamos!
           </p>

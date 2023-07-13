@@ -6,4 +6,4 @@ INTRODUCCION
 El repositorio simula ser una pagina de ventas de productos estampados.
 
 MODO DE USO
-Se interactua directamente en la página. Se seleccionan los productos con el botón "agregar al carrito" (unicamente tienen funcionalidad los de la seccion "productos destacados" al momento). Se aplican descuentos con las palabras 'zoe' y 'flor'. Se guardan los datos en el storage local.
+Se interactua directamente en la página. Se seleccionan los productos con el botón "agregar al carrito". Se aplican descuentos con las palabras 'zoe' y 'flor'. Se guardan los datos en el storage local. También se valida que todos los campos del formulario esten completos.-

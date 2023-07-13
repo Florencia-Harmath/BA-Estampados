@@ -773,7 +773,7 @@ nav {
   border: 1px solid black;
   padding: 1em;
   border-radius: 5px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: center;
 }
 .carrito-productos button {
@@ -783,7 +783,7 @@ nav {
   border: 1px solid black;
   padding: 1em;
   border-radius: 5px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: center;
   margin-bottom: 15px;
   cursor: pointer;
@@ -799,6 +799,10 @@ nav {
     flex-direction: column;
     width: 50%;
     margin-left: 100px;
+  }
+  .carrito-productos input,
+  .carrito-productos button {
+    font-size: 1.2rem;
   }
 }
 

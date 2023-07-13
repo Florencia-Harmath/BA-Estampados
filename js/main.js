@@ -85,8 +85,7 @@ function aplicarDescuento() {
   }
 
   if (descuentoPalabra in descuentos) {
-    descuento = descuentos[descuentoPalabra];
-    descuentoAplicado = true;
+    descuento = descuentos[descuentoPalabra]; 
   }
 
   if (totalCompra < descuento) {
@@ -98,6 +97,7 @@ function aplicarDescuento() {
     totalCompra -= descuento;
     mostrarTotalCompra();
     alert("Descuento aplicado correctamente");
+    descuentoAplicado = true;
     localStorage.setItem("descuentoAplicado", true);
   } else {
     alert("Lo siento, ese código no posee descuento");
@@ -110,8 +110,10 @@ function vaciarCarrito() {
   mostrarCarrito();
   mostrarTotalCompra();
   alert("Carrito vaciado correctamente");
+  descuentoAplicado = false;
 
   localStorage.removeItem("descuentoAplicado");
   localStorage.removeItem("carrito");
   localStorage.removeItem("totalCompra");
 }
+
